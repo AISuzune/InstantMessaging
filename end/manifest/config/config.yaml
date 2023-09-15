@@ -1,0 +1,32 @@
+logger:
+  savePath:  'log'
+  encoderType: 'console'
+  encodeLevel: 'CapitalLevelEncoder'
+  encodeCaller: 'FullCallerEncoder'
+
+database:
+  mysql:
+    addr: localhost
+    port: 3306
+    username: root
+    password: 123456
+    db: IM
+    charset: utf8mb4
+  redis:
+    addr: localhost
+    port: 6379
+    password:
+    db: 1
+
+server:
+  mode: release
+  addr: localhost
+  port: 8080
+  readTimeout: 60s
+  writeTimeout: 60s
+
+timeout:
+  DelayHeartbeat: 3   #延迟心跳时间  单位秒
+  HeartbeatHz: 30   #每隔多少秒心跳时间
+  HeartbeatMaxTime: 30000  #最大心跳时间  ，超过此就下线
+  RedisOnlineTime: 4  #缓存的在线用户时长   单位H
