@@ -40,6 +40,7 @@ func Subscribe(ctx context.Context, channel string) (string, error) {
 	fmt.Println("Subscribe 。。。。", msg.Payload)
 	return msg.Payload, err
 }
+
 // 设置UpGrader
 var upGrader = websocket.Upgrader{
 	CheckOrigin: func(r *http.Request) bool {
